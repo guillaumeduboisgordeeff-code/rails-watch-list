@@ -1,10 +1,27 @@
-<h1>All available lists</h1>
 
-<% @lists.each do |list|%>
-  <h2><%= list.name %></h2>
-  <ul>
-    <% list.movies.each do |movie| %>
-    <li><%= movie.title %></li>
+
+<div class="d-flex justify-content-center align-items-center text-center"
+      style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://img.magnific.com/vecteurs-libre/arriere-plan-salle-cinema-design-plat_23-2150998489.jpg?semt=ais_hybrid&w=740&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 400px;">
+  <h1 class="text-white">Save any kind of movies</h1>
+</div>
+
+<div class="container">
+<h2 class="mt-2 ms-5">My lists</h2>
+  <div class="container d-flex m-3">
+    <% @lists.each do |list|%>
+      <div class="card-category m-2 p-2 d-flex justify-content-center align-items-center"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 150px;
+      width: 400px;">
+        <h2 class="text-white"><%= list.name %></h2>
+      </div>
     <% end %>
-  </ul>
-<% end %>
+      <button class="btn btn-success text-white ms-5" style="height: 40px;">reate a movie</button>
+      <%= link_to 'create a movie', path %>
+  </div>
+</div>
