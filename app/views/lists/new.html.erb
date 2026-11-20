@@ -1,0 +1,5 @@
+<h1>Create a new movie list</h1>
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name, placeholder: "Ex: Science-Fiction" %>
+  <%= f.button :submit, "Save", class: "btn btn-primary" %>
+<% end %>
